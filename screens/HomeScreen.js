@@ -2,9 +2,7 @@ import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
-
 import { MonoText } from '../components/StyledText';
-
 import Charts from '../components/Charts';
 
 export default function HomeScreen() {
@@ -22,7 +20,10 @@ export default function HomeScreen() {
           />
         </View>
 
+        <Charts />
+
         <View style={styles.getStartedContainer}>
+
           <DevelopmentModeNotice />
 
           <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
