@@ -10,6 +10,16 @@ import {
 } from "react-native-chart-kit";
 import {Dimensions} from "react-native-web";
 
+const chartConfig = {
+    backgroundGradientFrom: "#1E2923",
+    backgroundGradientFromOpacity: 0,
+    backgroundGradientTo: "#08130D",
+    backgroundGradientToOpacity: 0.5,
+    color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
+    strokeWidth: 2, // optional, default 3
+    barPercentage: 0.5
+};
+
 const line = {
     labels: ["January", "February", "March", "April", "May", "June"],
     datasets: [
@@ -20,10 +30,23 @@ const line = {
     ]
 };
 
+const progressDatum = {
+    labels: ["Swim", "Bike", "Run"],
+    data: [0.4, 0.6, 0.8]
+};
+
 const Charts = () => {
     return (
         <View>
             <Text>Charts</Text>
+            <ProgressChart
+                data={progressDatum}
+                width={Dimensions.get("window").width}
+                height={220}
+                chartConfig={chartConfig}
+                hideLegend={false}
+            />
+            <hr/>
             <LineChart
                 data={line}
                 width={Dimensions.get("window").width}
