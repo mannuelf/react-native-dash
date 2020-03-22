@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   LineChart,
   BarChart,
@@ -22,7 +23,7 @@ const Charts = () => {
     <View>
       <Text>Charts</Text>
       <LineChart
-        data={linedata}
+        data={line}
         width={Dimenstions.get("window").width}
         height={220}
         yAxisLabel={"$"}

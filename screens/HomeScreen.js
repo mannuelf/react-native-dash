@@ -24,7 +24,6 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
-          <Charts />
 
           <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
 
