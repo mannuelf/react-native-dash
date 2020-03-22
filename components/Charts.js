@@ -17,7 +17,7 @@ const chartConfig = {
     backgroundGradientToOpacity: 1,
     color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
     strokeWidth: 2, // optional, default 3
-    barPercentage: 0.5
+    barPercentage: 1
 };
 
 const line = {
@@ -52,16 +52,7 @@ const Charts = () => {
                 width={Dimensions.get("window").width}
                 height={220}
                 yAxisLabel={"$"}
-                chartConfig={{
-                    backgroundColor: "#333333",
-                    backgroundGradientFrom: "#fb8c00",
-                    backgroundGradientTo: "#ffa726",
-                    decimalPlaces: 2, // optional, defaults to 2dp
-                    color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-                    style: {
-                        borderRadius: 1
-                    }
-                }}
+                chartConfig={chartConfig}
                 bezier
                 style={{
                     marginVertical: 8,
