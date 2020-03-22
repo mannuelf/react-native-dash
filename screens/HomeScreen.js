@@ -5,6 +5,8 @@ import * as WebBrowser from 'expo-web-browser';
 
 import { MonoText } from '../components/StyledText';
 
+import Charts from '../components/Charts';
+
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
@@ -21,6 +23,9 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.getStartedContainer}>
+          <DevelopmentModeNotice />
+          <Charts />
+
           <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
 
           <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
