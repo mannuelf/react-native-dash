@@ -14,7 +14,7 @@ const chartConfig = {
     backgroundGradientFrom: "#1E2923",
     backgroundGradientFromOpacity: 0,
     backgroundGradientTo: "#08130D",
-    backgroundGradientToOpacity: 0.5,
+    backgroundGradientToOpacity: 1,
     color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
     strokeWidth: 2, // optional, default 3
     barPercentage: 0.5
@@ -53,7 +53,7 @@ const Charts = () => {
                 height={220}
                 yAxisLabel={"$"}
                 chartConfig={{
-                    backgroundColor: "#e26a00",
+                    backgroundColor: "#333333",
                     backgroundGradientFrom: "#fb8c00",
                     backgroundGradientTo: "#ffa726",
                     decimalPlaces: 2, // optional, defaults to 2dp
