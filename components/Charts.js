@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import {
   LineChart,
   BarChart,
@@ -7,6 +8,7 @@ import {
   ContributionGraph,
   StackedBarChart
 } from "react-native-chart-kit";
+import {Dimensions} from "react-native-web";
 
 const line = {
   labels: ["January", "February", "March", "April", "May", "June"],
@@ -24,7 +26,7 @@ const Charts = () => {
       <Text>Charts</Text>
       <LineChart
         data={line}
-        width={Dimenstions.get("window").width}
+        width={Dimensions.get("window").width}
         height={220}
         yAxisLabel={"$"}
         chartConfig={{
