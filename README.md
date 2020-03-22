@@ -11,6 +11,22 @@ yarn
 yarn start
 ```
 
+## Run Android
+
+```bash
+yarn run android
+
+Press a for Android emulator
+```
+
+## Run iOS
+
+```bash
+yarn run ios
+
+Press i for iOS simulator
+```
+
 ## Run tests
 
 ```bash
