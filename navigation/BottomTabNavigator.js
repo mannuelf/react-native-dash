@@ -24,11 +24,19 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
+        name="About"
+        component={HomeScreen}
+        options={{
+          title: 'About this site',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+        }}
+      />
+      <BottomTab.Screen
         name="Links"
         component={LinksScreen}
         options={{
           title: 'Resources',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-star" />,
         }}
       />
     </BottomTab.Navigator>
@@ -41,7 +49,9 @@ function getHeaderTitle(route) {
   switch (routeName) {
     case 'Home':
       return 'COVID-19 Dashboard';
-    case 'Links':
+    case 'About this site':
+      return 'Links to learn more';
+  case 'Links':
       return 'Links to learn more';
   }
 }

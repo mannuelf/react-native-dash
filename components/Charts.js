@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { getConfirmedCases } from "../redux/actions/confirmedCases";
 import {Image, Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {
     LineChart,
@@ -7,13 +10,13 @@ import {
     ProgressChart,
     ContributionGraph,
     StackedBarChart
-} from "react-native-chart-kit";
-import {Dimensions} from "react-native-web";
+} from 'react-native-chart-kit';
+import {Dimensions} from 'react-native-web';
 
 const chartConfig = {
-    backgroundGradientFrom: "#1E2923",
+    backgroundGradientFrom: '#1E2923',
     backgroundGradientFromOpacity: 0,
-    backgroundGradientTo: "#08130D",
+    backgroundGradientTo: '#08130D',
     backgroundGradientToOpacity: 1,
     color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
     strokeWidth: 2, // optional, default 3
@@ -36,6 +39,13 @@ const progressDatum = {
 };
 
 const Charts = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+       dispatch(getConfirmedCases());
+    }, []);
+
+    const confirmedCasesData = useSelector(state => state.confirmedCases);
     return (
         <View>
             <Text>Charts</Text>

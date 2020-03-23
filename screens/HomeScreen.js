@@ -7,7 +7,7 @@ import { MonoText } from '../components/StyledText';
 import Charts from '../components/Charts';
 
 export default function HomeScreen() {
-  return (
+  return ( 
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
